@@ -1,0 +1,49 @@
+header {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Fix title */
+h3 {
+  margin: 0;
+  white-space: nowrap; /* prevent breaking */
+}
+
+/* Logo section */
+.container > a {
+  display: flex;
+  gap: 8px;
+}
+
+/* Nav styling */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Form alignment */
+form {
+  display: flex;
+  gap: 10px;
+}
+
+form input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
