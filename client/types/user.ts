@@ -16,3 +16,9 @@ export type RegisterCreds = {
     password:string,
     displayName: string,
 }
+
+export type order = {
+    id:string,
+    amount:number,
+    currency:string
+}

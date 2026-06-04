@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { LoginCreds, RegisterCreds, user } from '../../types/user';
+import { LoginCreds, order, RegisterCreds, user } from '../../types/user';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +41,13 @@ export class AccountService {
   localStorage.removeItem('user');
   this.currentUser.set(null);
  }
+
+
+  // Payment Integration with Razor Pay
+
+  createPaymentOrder(){
+    return this.http.post<order>(this.baseurl + 'payment/create-order',null);
+  }
+
 
 }

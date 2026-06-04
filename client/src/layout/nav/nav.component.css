@@ -1,5 +1,5 @@
 header {
-  background-color: black;
+  background-color :black;
   color: white;
   padding: 10px 20px;
 }
@@ -29,7 +29,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
 }
 

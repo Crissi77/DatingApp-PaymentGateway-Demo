@@ -1,0 +1,36 @@
+.subscription-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.subscription-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.subscription-container p {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 16px;
+}
+
+.subscription-container button {
+  background-color: #3399cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.subscription-container button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

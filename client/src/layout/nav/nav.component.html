@@ -1,7 +1,9 @@
 <header>
     <div class="container">
 
-        <a>
+        <a routerLink="/" routerLinkActive="text-accent"
+            [routerLinkActiveOptions]="{exact:true}"
+        >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -11,9 +13,10 @@
         </a>
 
         <nav class="navbar">
-            <a href="#">Messages</a>
-            <a href="#">List</a>
-            <a href="#">Messages</a>
+            <a routerLink="/members" routerLinkActive="text-accent">Matches</a>
+            <a routerLink="/lists" routerLinkActive="text-accent">List</a>
+            <a routerLink="/messages" routerLinkActive="text-accent">Messages</a>
+            <a routerLink="/payment" routerLinkActive="text-accent">Payment</a>
         </nav>
 
         @if (accountService.currentUser(); as user) {

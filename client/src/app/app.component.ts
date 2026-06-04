@@ -1,18 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, Inject, OnInit, signal } from '@angular/core';
-import { CommonModule} from "@angular/common";
+import { CommonModule, NgClass} from "@angular/common";
 import { NavComponent } from "../layout/nav/nav.component";
 import { AccountService } from '../core/account.service';
-import { HomeComponent } from '../features/home/home.component';
 import { lastValueFrom } from 'rxjs';
 import { user } from '../../types/user';
-
+import { Router, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [CommonModule, NavComponent,HomeComponent]
+  imports: [CommonModule, NavComponent,RouterOutlet,NgClass]
 })
 export class AppComponent implements OnInit {
 
@@ -20,6 +19,7 @@ export class AppComponent implements OnInit {
   private accountService = inject(AccountService);
   private http = inject(HttpClient);
   protected members = signal<user[]>([]);
+  protected router =inject(Router);
 
   async ngOnInit() {
     this.members.set(await this.getMembers());
